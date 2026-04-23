@@ -22,17 +22,29 @@ Pull updates every week and after any mid-week fix:
 git pull
 ```
 
-Each week has its own Flutter project. Open the week directory in
-your IDE and run:
+Each week has one or more starter projects in a numbered directory.
+For Flutter labs, open the project folder in your IDE and run:
 
 ```bash
 flutter pub get
 flutter run
 ```
 
+For the Week 2 FastAPI lab, follow the week's workbook for setup.
+
 ## Available weeks
 
-- [`week-06-state-management`](week-06-state-management/)
+### `week-02-git-apis-curl`
+
+- [`fastapi-starter`](week-02-git-apis-curl/fastapi-starter/)
+
+### `week-04-flutter-fundamentals`
+
+- [`snapshots`](week-04-flutter-fundamentals/snapshots/)
+
+### `week-06-state-management`
+
+- [`mood_tracker`](week-06-state-management/mood_tracker/)
 
 ---
 
