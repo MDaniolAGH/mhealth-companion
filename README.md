@@ -59,6 +59,10 @@ For the Week 2 FastAPI lab, follow the week's workbook for setup.
 
 - [`mood_tracker`](week-09-authentication/mood_tracker/)
 
+### `week-10-testing-quality`
+
+- [`mood_tracker`](week-10-testing-quality/mood_tracker/)
+
 ---
 
 This repository is **auto-generated** from the course monorepo. Do

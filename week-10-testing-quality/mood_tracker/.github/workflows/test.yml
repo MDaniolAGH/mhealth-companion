@@ -1,0 +1,52 @@
+# Week 10 — TODO 7: CI workflow.
+#
+# Goal: Auto-run all unit + widget tests on every push and pull
+# request, fail the build if anything fails.
+#
+# What you need to write:
+#   1. Trigger on `push` to main and `pull_request` to main.
+#   2. Job runs on ubuntu-latest.
+#   3. Steps:
+#      a. checkout the repo (actions/checkout@v4)
+#      b. set up Flutter (subosito/flutter-action@v2, channel: stable)
+#      c. flutter pub get
+#      d. flutter analyze
+#      e. flutter test --coverage
+#      f. upload coverage/lcov.info as an artifact
+#
+# Why these steps in this order?
+#   - pub get must come before any other Flutter command (resolves deps)
+#   - analyze before test (catch typos before spending CI minutes)
+#   - --coverage produces coverage/lcov.info that other tools can read
+#
+# Why NOT run integration_test in CI?
+#   integration_test needs a device/simulator. On GitHub-hosted runners
+#   that means firing up an Android emulator (slow) or paying for macOS
+#   minutes (iOS sim). Keep integration tests local for now.
+
+name: Test
+
+on:
+  # TODO 7.1: trigger on push to main and pull_request to main
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    name: Flutter unit + widget tests
+    runs-on: ubuntu-latest
+    steps:
+      # TODO 7.2: actions/checkout@v4
+
+      # TODO 7.3: subosito/flutter-action@v2 with channel stable
+
+      # TODO 7.4: flutter pub get
+
+      # TODO 7.5: flutter analyze
+
+      # TODO 7.6: flutter test --coverage
+
+      # TODO 7.7: upload coverage/lcov.info as a workflow artifact
+      #          (actions/upload-artifact@v4)
